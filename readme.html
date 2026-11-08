@@ -1,0 +1,15 @@
+<html><head><meta charset="utf-8"><title>WhatsApp Cache Cleaner 1.10</title></head><body>
+<h1>WhatsApp Cache Cleaner 1.10</h1>
+<p>Author: ELANGOVAN</p>
+<p>This version improves process identification. WebView2 is shared by many Windows applications, so its process name alone does not block cleanup.</p>
+<ol>
+<li>Scan storage: measures only the recognised WhatsApp cache folders.</li>
+<li>Check processes: checks WhatsApp.exe, WebView2 command/path markers, and parent-process relationships. Unrelated WebView2 processes do not block cleanup.</li>
+<li>Clean cache: available only after a successful scan and process check, followed by a separate confirmation.</li>
+</ol>
+<p>If Windows hides both the command line and executable path for a WebView2 process, the add-on treats it as unidentified and keeps cleanup disabled. This is intentional for safety.</p>
+<p>The add-on does not force-close processes, bypass permissions, take ownership, or elevate privileges. Cleanup results are measured after the attempt.</p>
+<p>Service Worker CacheStorage may contain cached application resources or media. WhatsApp may need to download some content again after cleanup.</p>
+<p>Protected: LocalState, session databases, IndexedDB, cookies, Local Storage, account/session data, and all unlisted folders.</p>
+<p>Shortcut: NVDA+Shift+W. If not registered automatically, assign it in NVDA Input Gestures. If an earlier test build of WhatsApp Cache Cleaner is installed, remove it before installing this version.</p>
+</body></html>
